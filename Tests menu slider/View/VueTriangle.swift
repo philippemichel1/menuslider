@@ -19,6 +19,7 @@ struct VueTriangle: View {
             }
             .fill(.brown)
             .shadow(radius: 10)
+            .navigationTitle("Triangle")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {

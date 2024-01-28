@@ -15,6 +15,7 @@ struct VueRectangle: View {
                 .fill(.brown)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .frame(width: 200,height: 100)
+                .navigationTitle("Rectangle")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {

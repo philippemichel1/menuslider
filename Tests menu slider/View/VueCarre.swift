@@ -15,6 +15,7 @@ struct VueCarre: View {
                 .fill(.brown)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .frame(width: 200, height: 200)
+                .navigationTitle("Carré")
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
