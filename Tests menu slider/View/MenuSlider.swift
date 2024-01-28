@@ -17,7 +17,7 @@ struct MenuSlider: View {
                 VStack {
                     HStack {                        
                         ZStack {
-                            Image(Ressources.image.logo.rawValue)
+                            Image(Ressources.images.logo.rawValue)
                                 .resizable()
                                 .frame(width: 60, height: 60)
                                 .clipShape(Circle())
@@ -25,49 +25,41 @@ struct MenuSlider: View {
                         }
                     }
                     .padding(.top, 20)
-                    Text("Titastus.com")
+                    
+                    //GeometryReader {position in
+                    Link("Titastus.com", destination: URL(string: Ressources.LienInternet.siteInternet.rawValue)!)
+                    //Text("Titastus.com")"
                         .foregroundColor(.white)
                         .font(.system(size: 18, weight: .semibold))
                         .padding(.top,10)
                         .padding(.bottom,40)
-                        
-                   
+                        .frame(width: 320)
+                        //.frame(width: position.size.width)
                     
-                    Button(action: {
-                      
-                        montrerMenu = false}
-                           , label: { MenuPropriete(rowActive: false, icon:""
-                            ,text: "" )
-                    })
-                    
-       // Création bouton 
-                    
+                   // } // fin GeometryReader
+       // Création bouton
+                    VStack(alignment:.leading) {
+                        MenuBoutons(image: Ressources.images.triangle.rawValue, titre: Ressources.Formes.triangle.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+                           
                         
-                        MenuBoutons(image: Ressources.image.triangle.rawValue, titre: "Triangle", selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
-                            .padding(.leading, -160)
-                            .padding(.top,5)
+                        MenuBoutons(image: Ressources.images.cercle.rawValue, titre: Ressources.Formes.cercle.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+                            
                         
+                        MenuBoutons(image: Ressources.images.carre.rawValue, titre: Ressources.Formes.carre.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+                            
                         
-                        MenuBoutons(image: Ressources.image.cercle.rawValue, titre: "Cercle", selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
-                            .padding(.leading, -160)
-                            .padding(.top,5)
+                        MenuBoutons(image: Ressources.images.rectangle.rawValue, titre: Ressources.Formes.rectangle.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+                            
                         
-                        MenuBoutons(image: Ressources.image.carre.rawValue, titre: "Carré", selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
-                            .padding(.leading, -160)
-                            .padding(.top,5)
+                        MenuBoutons(image: Ressources.images.ovale.rawValue, titre: Ressources.Formes.ovale.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
                         
-                        MenuBoutons(image: Ressources.image.rectangle.rawValue, titre: "Retangle", selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
-                            .padding(.leading, -160)
-                            .padding(.top,5)
-                        
-                        MenuBoutons(image: Ressources.image.ovale.rawValue, titre: "Ovale", selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
-                            .padding(.leading, -160)
-                            .padding(.top,5)
-                    
-                    
-                    
-                    Spacer()
-                    
+//                        ForEach(0..<4) {index in
+//                            MenuBoutons(image: Ressources.images.ovale.rawValue, titre: Ressources.Formes.ovale.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+//                        }
+                        Spacer()
+                    }
+                    .padding(.leading, -160)
+                    .padding(.top,5)
                 }
         // emplacement vertical du logo
                 .padding(.vertical, 30)

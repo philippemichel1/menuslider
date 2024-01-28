@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct VueCarre: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Rectangle()
-            .fill(.brown)
-            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-            .frame(width: 200, height: 200)
+        NavigationStack {
+            Rectangle()
+                .fill(.brown)
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .frame(width: 200, height: 200)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: Ressources.images.fermerFenetre.rawValue)
+                        }
+                    }
+                }
+            
+        }
+        
             
     }
 }

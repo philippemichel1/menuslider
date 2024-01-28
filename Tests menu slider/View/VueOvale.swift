@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct VueOvale: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        Ellipse()
-            .fill(.brown)
-            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-            .frame(width: 200,height: 100)
+        NavigationStack {
+            Ellipse()
+                .fill(.brown)
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .frame(width: 200,height: 100)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: Ressources.images.fermerFenetre.rawValue)
+                        }
+                    }
+                }
+        }
+        
     }
 }
 

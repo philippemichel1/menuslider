@@ -8,21 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.dismiss) var dismiss
     @State var montrerMenuSlider:Bool = false
     var body: some View {
         
         NavigationStack {
             
             GeometryReader { geo in
-                //VueTriangle()
+               
                 MenuSlider(montrerMenu: $montrerMenuSlider)
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
-                            Button {self.montrerMenuSlider.toggle() } label: {
-                                Image(systemName: Ressources.image.menu.rawValue)
+                            Button {
+                                dismiss()
+                                self.montrerMenuSlider.toggle() } label: {
+                                Image(systemName: Ressources.images.menu.rawValue)
                                     .resizable()
                                     .imageScale(.large)
-                                
                                 Spacer()
                             }
                         }

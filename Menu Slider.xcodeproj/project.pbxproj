@@ -31,7 +31,7 @@
 		375CF2162B59DACD006C9501 /* VueCecle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCecle.swift; sourceTree = "<group>"; };
 		375CF2182B59DB69006C9501 /* VueRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueRectangle.swift; sourceTree = "<group>"; };
 		375CF21A2B59DD43006C9501 /* VueOvale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueOvale.swift; sourceTree = "<group>"; };
-		37AE8B512B57089000F976B9 /* Tests menu slider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tests menu slider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AE8B512B57089000F976B9 /* Menu Slider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Slider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AE8B542B57089000F976B9 /* Tests_menu_sliderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_menu_sliderApp.swift; sourceTree = "<group>"; };
 		37AE8B562B57089000F976B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37AE8B582B57089300F976B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		37AE8B522B57089000F976B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37AE8B512B57089000F976B9 /* Tests menu slider.app */,
+				37AE8B512B57089000F976B9 /* Menu Slider.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37AE8B502B57089000F976B9 /* Tests menu slider */ = {
+		37AE8B502B57089000F976B9 /* Menu Slider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37AE8B5F2B57089300F976B9 /* Build configuration list for PBXNativeTarget "Tests menu slider" */;
+			buildConfigurationList = 37AE8B5F2B57089300F976B9 /* Build configuration list for PBXNativeTarget "Menu Slider" */;
 			buildPhases = (
 				37AE8B4D2B57089000F976B9 /* Sources */,
 				37AE8B4E2B57089000F976B9 /* Frameworks */,
@@ -128,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tests menu slider";
+			name = "Menu Slider";
 			productName = "Tests menu slider";
-			productReference = 37AE8B512B57089000F976B9 /* Tests menu slider.app */;
+			productReference = 37AE8B512B57089000F976B9 /* Menu Slider.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37AE8B4C2B57089000F976B9 /* Build configuration list for PBXProject "Tests menu slider" */;
+			buildConfigurationList = 37AE8B4C2B57089000F976B9 /* Build configuration list for PBXProject "Menu Slider" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37AE8B502B57089000F976B9 /* Tests menu slider */,
+				37AE8B502B57089000F976B9 /* Menu Slider */,
 			);
 		};
 /* End PBXProject section */
@@ -381,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37AE8B4C2B57089000F976B9 /* Build configuration list for PBXProject "Tests menu slider" */ = {
+		37AE8B4C2B57089000F976B9 /* Build configuration list for PBXProject "Menu Slider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37AE8B5D2B57089300F976B9 /* Debug */,
@@ -390,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37AE8B5F2B57089300F976B9 /* Build configuration list for PBXNativeTarget "Tests menu slider" */ = {
+		37AE8B5F2B57089300F976B9 /* Build configuration list for PBXNativeTarget "Menu Slider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37AE8B602B57089300F976B9 /* Debug */,

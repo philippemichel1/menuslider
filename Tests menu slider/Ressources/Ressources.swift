@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Ressources {
-    enum image:String {
+    enum images:String {
         case logo = "titastus"
         case triangle = "triangle.fill"
         case cercle = "circle.fill"
@@ -17,6 +17,20 @@ struct Ressources {
         case rectangle = "rectangle.fill"
         case ovale = "oval.fill"
         case menu = "filemenu.and.selection"
+        case fermerFenetre = "xmark.circle.fill"
+        
+    }
+    enum LienInternet:String {
+        case siteInternet = "https://titastus.com"
+        
+    }
+    
+    enum Formes:String {
+        case triangle = "Triangle"
+        case cercle = "Cercle"
+        case carre = "Carré"
+        case rectangle = "Rectangle"
+        case ovale = "Ovale"
         
         
     }
