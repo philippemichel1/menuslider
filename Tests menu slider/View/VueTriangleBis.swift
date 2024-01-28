@@ -19,25 +19,18 @@ struct TriangleBis:Shape {
 }
 
 struct VueTriangleBis: View {
+    
     @Environment(\.dismiss) var dismiss
-    @State var lancerAnimation:Bool = false
+    @State private var angleRotation = 0
     var body: some View {
         
-    
         NavigationStack {
             VStack {
                 TriangleBis()
                     .fill(.brown)
                     .frame(width: 200, height: 200)
-                    .rotationEffect(lancerAnimation ? Angle(degrees: 180) : Angle(degrees: 0))
-                    .animation(.linear(duration: 2), value: lancerAnimation)
+                    .rotationEffect(Angle(degrees: Double(angleRotation)))
                     .navigationTitle("Triangle" )
-                Button(action: {
-                    self.lancerAnimation.toggle()
-                }) {
-                    Text("Lancer Animation")
-                        .padding(.top, 30)
-                }
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button(action: {
@@ -50,6 +43,22 @@ struct VueTriangleBis: View {
                 
             }
         }
+        .onAppear {
+            // début animation
+            lancementAnimation()
+            
+        }.onReceive(Timer.publish(every: 0.01, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
+            // mise à jour l'angle
+            majAngle()
+        }
+    }
+    
+    func lancementAnimation() {
+        angleRotation = 0
+    }
+    
+    func majAngle() {
+        angleRotation = angleRotation + 1
     }
 }
 
