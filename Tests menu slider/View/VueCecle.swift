@@ -25,7 +25,7 @@ struct VueCecle: View {
                 .position(lancerAnimation ? positionArrive :positionDepart)
                 //.offset(y: lancerAnimation ? 0 : -UIScreen.main.bounds.height)
                 .animation(.linear(duration: 1), value: lancerAnimation )
-                .navigationTitle("Cercle")
+                .navigationTitle(Ressources.Formes.cercle.rawValue)
             Button(action: {
                 self.lancerAnimation.toggle()
             }) {

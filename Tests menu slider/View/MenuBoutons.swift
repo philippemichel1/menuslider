@@ -62,7 +62,9 @@ struct MenuBoutons: View {
             case  Ressources.Formes.carre.rawValue:
                 VueCarre()
             case  Ressources.Formes.rectangle.rawValue:
-                VueRectangle()
+                VueRectangle(verifOrientation: false)
+            case Ressources.Formes.capsule.rawValue:
+                VueCapsule()
             default:
                 // La seule forme qui reste c'est le ovale
                 VueOvale()

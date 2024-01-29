@@ -53,6 +53,8 @@ struct MenuSlider: View {
                         
                         MenuBoutons(image: Ressources.images.ovale.rawValue, titre: Ressources.Formes.ovale.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
                         
+                        MenuBoutons(image: Ressources.images.capsule.rawValue, titre: Ressources.Formes.capsule.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
+                        
 //                        ForEach(0..<4) {index in
 //                            MenuBoutons(image: Ressources.images.ovale.rawValue, titre: Ressources.Formes.ovale.rawValue, selectionBoutonMenu: $selectionBoutonMenu, montrerMenu: $montrerMenu, animation: animation)
 //                        }

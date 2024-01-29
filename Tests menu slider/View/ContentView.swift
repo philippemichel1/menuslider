@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.dismiss) var dismiss
-    @State var montrerMenuSlider:Bool = false
+    @State var montrerMenuSlider:Bool = true
     var body: some View {
         
         NavigationStack {

@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		370CF8572B5EB9BE0059C51D /* MenuBoutons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370CF8562B5EB9BE0059C51D /* MenuBoutons.swift */; };
 		37548F842B62C4D500DA2356 /* FormeSelectionCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37548F832B62C4D500DA2356 /* FormeSelectionCustom.swift */; };
-		375CF2132B59D0B7006C9501 /* VueTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CF2122B59D0B7006C9501 /* VueTriangle.swift */; };
 		375CF2152B59D88B006C9501 /* VueCarre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CF2142B59D88B006C9501 /* VueCarre.swift */; };
 		375CF2172B59DACD006C9501 /* VueCecle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CF2162B59DACD006C9501 /* VueCecle.swift */; };
 		375CF2192B59DB69006C9501 /* VueRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CF2182B59DB69006C9501 /* VueRectangle.swift */; };
 		375CF21B2B59DD43006C9501 /* VueOvale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CF21A2B59DD43006C9501 /* VueOvale.swift */; };
+		377595842B66F80B00567E67 /* VueCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377595832B66F80B00567E67 /* VueCapsule.swift */; };
 		37AE8B552B57089000F976B9 /* Tests_menu_sliderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE8B542B57089000F976B9 /* Tests_menu_sliderApp.swift */; };
 		37AE8B572B57089000F976B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE8B562B57089000F976B9 /* ContentView.swift */; };
 		37AE8B592B57089300F976B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AE8B582B57089300F976B9 /* Assets.xcassets */; };
@@ -26,11 +26,11 @@
 /* Begin PBXFileReference section */
 		370CF8562B5EB9BE0059C51D /* MenuBoutons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBoutons.swift; sourceTree = "<group>"; };
 		37548F832B62C4D500DA2356 /* FormeSelectionCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormeSelectionCustom.swift; sourceTree = "<group>"; };
-		375CF2122B59D0B7006C9501 /* VueTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueTriangle.swift; sourceTree = "<group>"; };
 		375CF2142B59D88B006C9501 /* VueCarre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCarre.swift; sourceTree = "<group>"; };
 		375CF2162B59DACD006C9501 /* VueCecle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCecle.swift; sourceTree = "<group>"; };
 		375CF2182B59DB69006C9501 /* VueRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueRectangle.swift; sourceTree = "<group>"; };
 		375CF21A2B59DD43006C9501 /* VueOvale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueOvale.swift; sourceTree = "<group>"; };
+		377595832B66F80B00567E67 /* VueCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCapsule.swift; sourceTree = "<group>"; };
 		37AE8B512B57089000F976B9 /* Menu Slider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Slider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AE8B542B57089000F976B9 /* Tests_menu_sliderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_menu_sliderApp.swift; sourceTree = "<group>"; };
 		37AE8B562B57089000F976B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,8 +95,8 @@
 				37548F832B62C4D500DA2356 /* FormeSelectionCustom.swift */,
 				370CF8562B5EB9BE0059C51D /* MenuBoutons.swift */,
 				37AE8B622B570FCD00F976B9 /* MenuSlider.swift */,
-				375CF2122B59D0B7006C9501 /* VueTriangle.swift */,
 				37D752672B6167B00076E6FD /* VueTriangleBis.swift */,
+				377595832B66F80B00567E67 /* VueCapsule.swift */,
 				375CF2142B59D88B006C9501 /* VueCarre.swift */,
 				375CF2162B59DACD006C9501 /* VueCecle.swift */,
 				375CF2182B59DB69006C9501 /* VueRectangle.swift */,
@@ -183,11 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375CF2132B59D0B7006C9501 /* VueTriangle.swift in Sources */,
 				370CF8572B5EB9BE0059C51D /* MenuBoutons.swift in Sources */,
 				37D752682B6167B00076E6FD /* VueTriangleBis.swift in Sources */,
 				37AE8B572B57089000F976B9 /* ContentView.swift in Sources */,
 				37548F842B62C4D500DA2356 /* FormeSelectionCustom.swift in Sources */,
+				377595842B66F80B00567E67 /* VueCapsule.swift in Sources */,
 				37AE8B632B570FCD00F976B9 /* MenuSlider.swift in Sources */,
 				375CF2192B59DB69006C9501 /* VueRectangle.swift in Sources */,
 				37FA0A5C2B59AC1E00BC9BAA /* Ressources.swift in Sources */,

@@ -30,7 +30,7 @@ struct VueTriangleBis: View {
                     .fill(.brown)
                     .frame(width: 200, height: 200)
                     .rotationEffect(Angle(degrees: Double(angleRotation)))
-                    .navigationTitle("Triangle" )
+                    .navigationTitle(Ressources.Formes.triangle.rawValue)
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
                             Button(action: {

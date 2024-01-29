@@ -18,6 +18,7 @@ struct Ressources {
         case ovale = "oval.fill"
         case menu = "filemenu.and.selection"
         case fermerFenetre = "xmark.circle.fill"
+        case capsule = "capsule.portrait.fill"
         
     }
     enum LienInternet:String {
@@ -31,6 +32,7 @@ struct Ressources {
         case carre = "Carré"
         case rectangle = "Rectangle"
         case ovale = "Ovale"
+        case capsule = "Capsule"
         
         
     }
