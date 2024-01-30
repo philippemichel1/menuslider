@@ -23,7 +23,6 @@ struct VueCecle: View {
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .frame(width: formeGrosseur,height: formeGrosseur)
                 .position(lancerAnimation ? positionArrive :positionDepart)
-                //.offset(y: lancerAnimation ? 0 : -UIScreen.main.bounds.height)
                 .animation(.linear(duration: 1), value: lancerAnimation )
                 .navigationTitle(Ressources.Formes.cercle.rawValue)
             Button(action: {

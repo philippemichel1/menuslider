@@ -34,9 +34,9 @@ struct VueCarre: View {
                             }
                         }
                 }
-            }.onReceive(Timer.publish(every: 0.1, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
+            }
+            .onReceive(Timer.publish(every: 0.1, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
                 majAnimation()
-                
             }
     
         }
