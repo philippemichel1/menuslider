@@ -43,19 +43,15 @@ struct VueTriangleBis: View {
                 
             }
         }
-        .onAppear {
-            // début animation
-            lancementAnimation()
-            
-        }.onReceive(Timer.publish(every: 0.01, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
+        .onReceive(Timer.publish(every: 0.01, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
             // mise à jour l'angle
             majAngle()
         }
     }
     
-    func lancementAnimation() {
-        angleRotation = 0
-    }
+//    func lancementAnimation() {
+//        angleRotation = 0
+//    }
     
     func majAngle() {
         angleRotation = angleRotation + 1
