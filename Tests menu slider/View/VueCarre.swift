@@ -22,7 +22,7 @@ struct VueCarre: View {
                     .frame(width: largeur, height: hauteur)
                     .navigationTitle(Ressources.Formes.carre.rawValue)
                 Rectangle()
-                    .fill(.brown).opacity(1)
+                    .fill(.brown)
                     .frame(width: largeur * recouvrementForme / 100, height: hauteur)
                     .animation(.linear, value: recouvrementForme)
                     .toolbar {
