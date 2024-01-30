@@ -11,9 +11,14 @@ struct VueCecle: View {
     @Environment(\.dismiss) var dismiss
     
     @State var lancerAnimation:Bool = false
-    @State var positionDepart = CGPoint(x: UIScreen.main.bounds.width / 2, y: 0)
-    @State var positionArrive = CGPoint(x: UIScreen.main.bounds.width / 2, y: 550)
+    @State var position = CGPoint(x: 0, y: 0)
     let  formeGrosseur:CGFloat = 200
+    let centreX = UIScreen.main.bounds.width / 2
+    let largeurEcran = UIScreen.main.bounds.width
+    let hauteurEcran = UIScreen.main.bounds.height
+    
+    
+    
     
     
     var body: some View {
@@ -22,15 +27,10 @@ struct VueCecle: View {
                 .fill(.brown)
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .frame(width: formeGrosseur,height: formeGrosseur)
-                .position(lancerAnimation ? positionArrive :positionDepart)
-                .animation(.linear(duration: 1), value: lancerAnimation )
+                .position(position)
+                .animation(.linear, value: position)
                 .navigationTitle(Ressources.Formes.cercle.rawValue)
-            Button(action: {
-                self.lancerAnimation.toggle()
-            }) {
-                Text("Lancer Animation")
-                    .padding(.top, 30)
-            }
+            
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
@@ -40,8 +40,21 @@ struct VueCecle: View {
                         }
                     }
                 }
+        }.onAppear{
+             position = CGPoint(x: centreX, y: 0)
         }
-        
+        .onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
+            // mise à jour position
+            majAnimation()
+        }
+    }
+    func majAnimation() {
+        var nouvellePosition = CGPoint(x: centreX, y: (hauteurEcran - formeGrosseur) - 50)
+
+        if position.y == nouvellePosition.y {
+            nouvellePosition = CGPoint(x: centreX, y: 0)
+        }
+        position = nouvellePosition
     }
 }
 

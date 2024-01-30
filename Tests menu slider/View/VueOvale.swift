@@ -32,7 +32,7 @@ struct VueOvale: View {
                     }
                 }
         }
-        .onReceive(Timer.publish(every: 0.5, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
+        .onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
             majAnimation()
         }
         
