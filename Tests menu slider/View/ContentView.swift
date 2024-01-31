@@ -16,7 +16,7 @@ struct ContentView: View {
             
             GeometryReader { geo in
                 VStack {
-                    Text("Appuyer sur le bouton pour faire apparaitre le menu slider")
+                    Text("Appuyer sur le bouton en haut à droite, pour faire apparaitre le menu slider")
                         .padding()
                         .foregroundColor(.accent)
                         .font(.system(size: 18))
