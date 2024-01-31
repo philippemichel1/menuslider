@@ -33,7 +33,9 @@ struct VueOvale: View {
                 }
         }
         .onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
-            majAnimation()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                majAnimation()
+            }
         }
         
     }

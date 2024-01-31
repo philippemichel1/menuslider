@@ -29,7 +29,7 @@ struct VueCecle: View {
                 .frame(width: formeGrosseur,height: formeGrosseur)
                 .position(position)
                 .animation(.linear, value: position)
-                .navigationTitle(Ressources.Formes.cercle.rawValue)
+            
             
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -40,8 +40,13 @@ struct VueCecle: View {
                         }
                     }
                 }
+                .navigationTitle(Ressources.Formes.cercle.rawValue)
         }.onAppear{
-             position = CGPoint(x: centreX, y: 0)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                position = CGPoint(x: centreX, y: 0)
+                
+            }
+            
         }
         .onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
             // mise à jour position
@@ -50,7 +55,7 @@ struct VueCecle: View {
     }
     func majAnimation() {
         var nouvellePosition = CGPoint(x: centreX, y: (hauteurEcran - formeGrosseur) - 50)
-
+        
         if position.y == nouvellePosition.y {
             nouvellePosition = CGPoint(x: centreX, y: 0)
         }

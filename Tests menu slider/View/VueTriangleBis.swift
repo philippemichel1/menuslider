@@ -25,22 +25,23 @@ struct VueTriangleBis: View {
     var body: some View {
         
         NavigationStack {
-            VStack {
-                TriangleBis()
-                    .fill(.brown)
-                    .frame(width: 200, height: 200)
-                    .rotationEffect(Angle(degrees: Double(angleRotation)))
-                    .navigationTitle(Ressources.Formes.triangle.rawValue)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image(systemName: Ressources.images.fermerFenetre.rawValue)
+                VStack {
+                    TriangleBis()
+                        .fill(.brown)
+                        .frame(width: 200, height: 200)
+                        .rotationEffect(Angle(degrees: Double(angleRotation)))
+                        
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button(action: {
+                                    dismiss()
+                                }) {
+                                    Image(systemName: Ressources.images.fermerFenetre.rawValue)
+                                }
                             }
                         }
-                    }
-                
+                        .navigationTitle(Ressources.Formes.triangle.rawValue)
+                    
             }
         }
         .onReceive(Timer.publish(every: 0.01, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in

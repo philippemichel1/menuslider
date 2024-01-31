@@ -34,7 +34,7 @@ struct AnimCapsule: View {
         HStack(spacing:0){
             ForEach((0...nbrCapsule).reversed(), id: \.self) {capsule in
                 MaCpasule(largeur: $capsuleLargeur, hauteur: $hauteurCapsule[capsule], color: $couleurCapsule[capsule])
-                    .animation(.linear(duration: 0.4),value: hauteurCapsule[capsule])
+                    .animation(.linear(duration: 0.6),value: hauteurCapsule[capsule])
                     .onReceive(timer) { time in
                         hauteurCapsule[capsule] = hauteurAleatoire()
                     }
@@ -47,13 +47,12 @@ struct AnimCapsule: View {
         return CGFloat(arc4random_uniform(UInt32(hauteurAnimation)))
     }
 }
-    
+
 struct VueCapsule: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack {
             AnimCapsule()
-                .navigationTitle(Ressources.Formes.capsule.rawValue)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
@@ -63,7 +62,7 @@ struct VueCapsule: View {
                         }
                     }
                 }
-            
+                .navigationTitle(Ressources.Formes.capsule.rawValue)
         }
         
     }

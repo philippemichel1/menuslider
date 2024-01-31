@@ -20,7 +20,6 @@ struct VueCarre: View {
                     .fill(.gray).opacity(0.25)
                     .shadow(radius: coinsArrondis)
                     .frame(width: largeur, height: hauteur)
-                    .navigationTitle(Ressources.Formes.carre.rawValue)
                 Rectangle()
                     .fill(.brown)
                     .frame(width: largeur * recouvrementForme / 100, height: hauteur)
@@ -33,19 +32,25 @@ struct VueCarre: View {
                                 Image(systemName: Ressources.images.fermerFenetre.rawValue)
                             }
                         }
-                }
+                    }
+                    .navigationTitle(Ressources.Formes.carre.rawValue)
             }
             .onReceive(Timer.publish(every: 0.1, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
-                majAnimation()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    majAnimation()
+                }
+                
             }
-    
+            
         }
     }
     func majAnimation() {
         if recouvrementForme <= 100 {
             recouvrementForme += 1
         } else {
-            recouvrementForme  = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                recouvrementForme  = 1
+            }
         }
     }
 }

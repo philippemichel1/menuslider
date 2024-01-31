@@ -20,7 +20,6 @@ struct VueRectangle: View {
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .frame(width: largeur,height: hauteur)
                 .animation(.linear, value: verifOrientation)
-                .navigationTitle(Ressources.Formes.rectangle.rawValue)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
@@ -30,10 +29,14 @@ struct VueRectangle: View {
                         }
                     }
                 }
+                .navigationTitle(Ressources.Formes.rectangle.rawValue)
         }
         .onAppear {
             // début animation
-            lancementAnimation()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                lancementAnimation()
+            }
+            
             
         }.onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
             // mise à jour l'angle
