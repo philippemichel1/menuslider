@@ -15,7 +15,12 @@ struct ContentView: View {
         NavigationStack {
             
             GeometryReader { geo in
-               
+                VStack {
+                    Text("Appuyer sur le bouton pour faire apparaitre le menu slider")
+                        .padding()
+                        .foregroundColor(.accent)
+                        .font(.system(size: 18))
+                }
                 MenuSlider(montrerMenu: $montrerMenuSlider)
                     .toolbar {
                         ToolbarItem(placement: .topBarTrailing) {
