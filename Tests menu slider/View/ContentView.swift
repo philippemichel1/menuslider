@@ -16,8 +16,10 @@ struct ContentView: View {
             GeometryReader { geo in
                 VStack {
                     Spacer()
-                    Text("Appuyez sur le bouton en haut à droite, pour faire apparaitre ou disparaitre le menu ")
+                    Text("Appuyez sur le bouton en haut à droite, pour faire apparaitre ou disparaitre le menu. ")
                         .padding()
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
                         .foregroundColor(.accent)
                         .font(.system(size: 18))
                     Spacer()
