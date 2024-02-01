@@ -34,6 +34,7 @@ struct VueCarre: View {
                         }
                     }
                     .navigationTitle(Ressources.Formes.carre.rawValue)
+                    .toolbarTitleDisplayMode(.automatic)
             }
             .onReceive(Timer.publish(every: 0.1, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {

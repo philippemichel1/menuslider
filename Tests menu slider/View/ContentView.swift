@@ -13,7 +13,6 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
-            
             GeometryReader { geo in
                 VStack {
                     Text("Appuyer sur le bouton en haut à droite, pour faire apparaitre le menu slider")

@@ -41,6 +41,8 @@ struct VueCecle: View {
                     }
                 }
                 .navigationTitle(Ressources.Formes.cercle.rawValue)
+                .toolbarTitleDisplayMode(.automatic)
+            
         }.onAppear{
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 position = CGPoint(x: centreX, y: 0)

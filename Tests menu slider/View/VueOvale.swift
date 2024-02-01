@@ -21,7 +21,6 @@ struct VueOvale: View {
                 .frame(width: largeur * CGFloat(scale) ,height: hauteur * CGFloat(scale))
                 .transition(.scale)
                 .animation(.linear, value: scale)
-                .navigationTitle(Ressources.Formes.ovale.rawValue)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button(action: {
@@ -31,6 +30,9 @@ struct VueOvale: View {
                         }
                     }
                 }
+                .navigationTitle(Ressources.Formes.ovale.rawValue)
+                .toolbarTitleDisplayMode(.automatic)
+            
         }
         .onReceive(Timer.publish(every: 2, on: .main, in: RunLoop.Mode.common).autoconnect()) {_ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {

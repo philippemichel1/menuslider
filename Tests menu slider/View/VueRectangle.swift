@@ -30,6 +30,7 @@ struct VueRectangle: View {
                     }
                 }
                 .navigationTitle(Ressources.Formes.rectangle.rawValue)
+                .toolbarTitleDisplayMode(.automatic)
         }
         .onAppear {
             // début animation

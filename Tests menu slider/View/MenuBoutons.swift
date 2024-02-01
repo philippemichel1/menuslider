@@ -69,10 +69,8 @@ struct MenuBoutons: View {
                 // La seule forme qui reste c'est le ovale
                 VueOvale()
             }
-            
-            
-            
         })
+        
     }
 }
 //#Preview {

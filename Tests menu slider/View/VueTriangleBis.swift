@@ -41,6 +41,7 @@ struct VueTriangleBis: View {
                             }
                         }
                         .navigationTitle(Ressources.Formes.triangle.rawValue)
+                        .toolbarTitleDisplayMode(.automatic)
                     
             }
         }

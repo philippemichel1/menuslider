@@ -63,6 +63,7 @@ struct VueCapsule: View {
                     }
                 }
                 .navigationTitle(Ressources.Formes.capsule.rawValue)
+                .toolbarTitleDisplayMode(.automatic)
         }
         
     }
