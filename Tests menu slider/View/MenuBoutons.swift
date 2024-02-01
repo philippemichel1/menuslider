@@ -53,7 +53,7 @@ struct MenuBoutons: View {
                 
             })
         }
-        .fullScreenCover(isPresented: $MontrerForme, content: {
+        .fullScreenCover(isPresented: $MontrerForme, onDismiss: fermetureFenetre) {
             switch selectionBoutonMenu {
             case Ressources.Formes.triangle.rawValue:
                 VueTriangleBis()
@@ -69,8 +69,12 @@ struct MenuBoutons: View {
                 // La seule forme qui reste c'est le ovale
                 VueOvale()
             }
-        })
-        
+        }
+    }
+    
+    // Fermeture des fenetres  FullSceenCover et ouverture du menu Slider
+    func fermetureFenetre() {
+      montrerMenu = true
     }
 }
 //#Preview {
