@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationStack {
             GeometryReader { geo in
                 VStack {
-                    Text("Appuyer sur le bouton en haut à droite, pour faire apparaitre le menu slider")
+                    Text("Appuyez sur le bouton en haut à droite, pour faire apparaitre ou disparaitre le menu slider")
                         .padding()
                         .foregroundColor(.accent)
                         .font(.system(size: 18))

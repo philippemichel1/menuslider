@@ -5,6 +5,7 @@
 //  Created by Philippe MICHEL on 18/01/2024.
 //
 
+//Vue du cercle
 import SwiftUI
 
 struct VueCecle: View {
@@ -18,9 +19,6 @@ struct VueCecle: View {
     let hauteurEcran = UIScreen.main.bounds.height
     
     
-    
-    
-    
     var body: some View {
         NavigationStack {
             Circle()
@@ -29,7 +27,6 @@ struct VueCecle: View {
                 .frame(width: formeGrosseur,height: formeGrosseur)
                 .position(position)
                 .animation(.linear, value: position)
-            
             
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -55,6 +52,8 @@ struct VueCecle: View {
             majAnimation()
         }
     }
+    
+    // parametres de la position du cercle 
     func majAnimation() {
         var nouvellePosition = CGPoint(x: centreX, y: (hauteurEcran - formeGrosseur) - 50)
         

@@ -10,10 +10,11 @@ import SwiftUI
 
 struct FormeSelectionCustom:Shape {
     var coins: UIRectCorner
-    var arrondi: CGFloat
+    var arrondis: CGFloat
     
+    // création des arrondis pour le menu selection 
     func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: coins,  cornerRadii: CGSize(width: arrondi, height: arrondi))
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: coins,  cornerRadii: CGSize(width: arrondis, height: arrondis))
         return Path(path.cgPath)
     }
     

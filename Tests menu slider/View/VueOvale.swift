@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+// vue ovale
 struct VueOvale: View {
     @Environment(\.dismiss) var dismiss
+    
     @State var scale:Float = 1.0
     @State var hauteur:CGFloat = 100
     @State var largeur:CGFloat = 200

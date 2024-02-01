@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// vue de la vue rectangle
 struct VueRectangle: View {
     @State var hauteur:CGFloat = 100
     @State var largeur:CGFloat = 200
@@ -61,8 +62,6 @@ struct VueRectangle: View {
             hauteur -= 100
         }
         verifOrientation.toggle()
-        
-        
     }
 }
 

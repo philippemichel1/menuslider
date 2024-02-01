@@ -47,9 +47,10 @@ struct AnimCapsule: View {
         return CGFloat(arc4random_uniform(UInt32(hauteurAnimation)))
     }
 }
-
+// vue de la capsule
 struct VueCapsule: View {
     @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         NavigationStack {
             AnimCapsule()

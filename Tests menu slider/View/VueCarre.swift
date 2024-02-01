@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// vue du carré 
 struct VueCarre: View {
     @Environment(\.dismiss) var dismiss
     @State var hauteur: CGFloat = 200

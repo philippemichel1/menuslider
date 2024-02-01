@@ -24,6 +24,7 @@ struct VueTriangleBis: View {
     @State private var angleRotation = 0
     var body: some View {
         
+        // vue du triangle 
         NavigationStack {
                 VStack {
                     TriangleBis()

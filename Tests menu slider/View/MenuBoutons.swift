@@ -43,7 +43,7 @@ struct MenuBoutons: View {
                         if selectionBoutonMenu == titre {
                             Color.white
                                 .opacity(selectionBoutonMenu == titre ? 1 : 0)
-                                .clipShape(FormeSelectionCustom(coins: [.topRight,.bottomRight], arrondi: 12))
+                                .clipShape(FormeSelectionCustom(coins: [.topRight,.bottomRight], arrondis: 12))
                             // Crée une transition entre les menus pour la barre de selection
                                 .matchedGeometryEffect(id: "TAB", in: animation)
                         }
