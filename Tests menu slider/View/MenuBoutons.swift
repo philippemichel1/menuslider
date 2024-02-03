@@ -15,17 +15,19 @@ struct MenuBoutons: View {
     @Binding  var montrerMenu:Bool
     @State    var MontrerForme:Bool = false
     
-    // Pour animation du menu slide
+    // Pour animation du menu side
     var animation: Namespace.ID
     
     var body: some View {
         VStack(alignment: .leading) {
             Button(action: {
                 withAnimation(.spring()) {selectionBoutonMenu = titre
-                    
                 } completion: {
                     montrerMenu = false
-                    self.MontrerForme = true
+                    //Temps avant d'afficher la fenetre fullScreenCover pour laisser le temps au volet de se refermer 
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self.MontrerForme = true
+                    }
                 }
             }, label: {
                 HStack(spacing: 15) {
