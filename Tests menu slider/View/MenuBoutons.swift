@@ -24,7 +24,8 @@ struct MenuBoutons: View {
                 withAnimation(.spring()) {selectionBoutonMenu = titre
                 } completion: {
                     montrerMenu = false
-                    //Temps avant d'afficher la fenetre fullScreenCover pour laisser le temps au volet de se refermer 
+                    //Temps avant d'afficher la fenetre fullScreenCover pour laisser le temps au volet de se refermer.
+                    //temps 0.3 avant que montrerForme passe à true
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                         self.MontrerForme = true
                     }
